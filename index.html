@@ -27,6 +27,13 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
+    
+    
+    <!-- Translation-->
+    <script data-require="angular.js@1.3.15" data-semver="1.3.15" src="https://code.angularjs.org/1.3.15/angular.js"></script>
+    <script data-require="angular-translate@2.6.0" data-semver="2.6.0" src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.6.0/angular-translate.js"></script>
+    <script src="translate.js"></script>
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,8 +46,14 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-app="theApp" ng-controller="HomeCtrl as ctrl">
+    
+    
+    
 
+    
+    
+    
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -60,21 +73,26 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#Service">purpose</a>
+                        <a class="page-scroll" href="#Service">{{ 'MENU_PURPOSE' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#AboutUs">About us</a>
+                        <a class="page-scroll" href="#AboutUs">{{ 'MENU_ABOUT_US' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#Events">events</a>
+                        <a class="page-scroll" href="#Events">{{ 'MENU_EVENTS' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#Donation">donation</a>
+                        <a class="page-scroll" href="#Donation">{{ 'MENU_DONATION' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#ContactUs">contact us</a>
+                        <a class="page-scroll" href="#ContactUs">{{ 'MENU_CONTACT_US' | translate }}</a>
                     </li>
-                    
+                    <li>
+                        <a class="page-scroll">
+                            <select ng-options="language | translate for language in ctrl.languages" ng-model="ctrl.language" ng-change="ctrl.updateLanguage()"></select>
+                        </a>
+                        
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -88,9 +106,9 @@
                 <!--h1>nm rulleskiskyting<br /> 23 - 25 September 2016</h1-->
                 <!--img src="img/logo.jpg" style="width: 350px;border-style: solid;border-width: 1px;"-->
                 <br/>
-                <p style="color:#0080ff; font-family:bradley Hand ITC; font-size:70px; font-weight:bold">LevSaman <br/>Live together</p>
+                <p style="color:#0080ff; font-family:bradley Hand ITC; font-size:70px; font-weight:bold">{{ 'TITLE' | translate }}</p>
                 <br/><br/><br/><br/><br/><br/>
-                <a href="#Service" class="btn btn-info bg-info  btn-xl page-scroll">Let's start!</a>
+                <!--a href="#Service" class="btn btn-info bg-info  btn-xl page-scroll">Let's start!</a-->
             </div>
         </div>
     </header>
@@ -99,12 +117,12 @@
     <section class="bg-info"  id="Service">        
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Pusrpose</h2>
+                    <h2 class="section-heading">{{ 'MENU_PURPOSE' | translate }}</h2>
                     <hr class="dark">
             </div>
             <section>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>LevSaman assists refugees and other people of concern to integrate in the Norwegian society by providing them the needed trainings and coaching </p>
+                    <p>{{ 'PURPOSE_PARAGRAPH' | translate }}</p>
                 </div>                
                 <div class="container">
                     <div class="row">
@@ -133,11 +151,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">About Us</h2>
+                    <h2 class="section-heading">{{ 'MENU_ABOUT_US' | translate }}</h2>
                     <hr class="dark">
                 </div>
                 <p class="col-lg-8 col-lg-offset-2 text-center">
-                    Feel free to check our <a href="document/Memorandum.pdf">memorundum</a> :) 
+                    {{ 'ABOUT_US_PARAGRAPH' | translate }} 
                 </p>
                 <div class="col-lg-4 col-sm-6">
                         <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
@@ -176,12 +194,12 @@
     <section class="bg-info"  id="Events">        
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Event</h2>
+                    <h2 class="section-heading">{{ 'MENU_EVENTS' | translate }}</h2>
                     <hr class="dark">
             </div>
             <section>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>Join us at the school each <b>Friday</b> from <b>20:00</b> to <b>21:00</b> for free IT/english trainning </p>
+                    <p>{{ 'EVENTS_PARAGRAPH' | translate }}</p>
                 </div>
             </section>
         </div>
@@ -189,12 +207,12 @@
         <section  id="Donation">        
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Donation</h2>
+                    <h2 class="section-heading">{{ 'MENU_DONATION' | translate }}</h2>
                     <hr class="dark">
             </div>
             <section>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>You can also make a difference in your community by supporting LevSaman:<br/>
+                    <p>{{ 'DONATION_PARAGRAPH' | translate }}:<br/>
                         <b>Bank information</b>: 3800 15 89889 
                     </p>
                 </div>
@@ -207,7 +225,35 @@
             <div class="row">
                 
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Contact us</h2>
+                    <h2 class="section-heading">{{ 'MENU_CONTACT_US' | translate }}</h2>
+                    <hr class="primary">
+                </div>
+                
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div>
+                        <div class="panel panel-default">
+                            <div class="panel-body text-center">
+                                
+                    <!--img src="img/logo%20and%20brand.png" width='50%'/-->
+                                <h4><b>Address</b></h4>
+                                8 Hatlavegen, 6893 Vik i sogn<br />
+                                <h4><b>Email</b></h4>
+                                info@levsaman.no<br />
+                                <hr />
+                                <div id="map1" class="map">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+    <section  id="Sponsor">        
+        <div class="container">
+            <div class="row">                
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">{{ 'SPONSOR' | translate }}</h2>
                     <hr class="primary">
                 </div>
                 
@@ -217,13 +263,8 @@
                             <div class="panel-body text-center">
                                 
                     <img src="img/logo%20and%20brand.png" width='50%'/>
-                                <h4><b>Address</b></h4>
-                                8 Hatlavegen, 6893 Vik i sogn<br />
-                                <h4><b>Email</b></h4>
-                                info@levsaman.no<br />
-                                <hr />
-                                <div id="map1" class="map">
-                                </div>
+                                <h4><b>Web: </b>www.smartvik.com<br /></h4>
+                                <h4><b>Email: </b>info@smartvik.com<br /></h4>
                             </div>
                         </div>
                     </div>
