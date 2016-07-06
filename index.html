@@ -29,6 +29,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/smartRTOSyoutube.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.0.0/bootstrap-social.css">
 
 
 
@@ -95,10 +97,10 @@
                         <a class="page-scroll" href="#Donation">{{ 'MENU_DONATION' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#ContactUs">{{ 'MENU_CONTACT_US' | translate }}</a>
+                        <a class="page-scroll" href="#Sponsor">{{ 'SPONSOR' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#Sponsor">{{ 'SPONSOR' | translate }}</a>
+                        <a class="page-scroll" href="#ContactUs">{{ 'MENU_CONTACT_US' | translate }}</a>
                     </li>
                     <li>
                         <a class="page-scroll">
@@ -242,37 +244,7 @@
         </div>
     </section>
 </span></div>
-    
-    <section  class="bg-info"   id="ContactUs">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">{{ 'MENU_CONTACT_US' | translate }}</h2>
-                    <hr class="primary">
-                </div>
-                
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div>
-                        <div class="panel panel-default">
-                            <div class="panel-body text-center">
-                                
-                    <!--img src="img/logo%20and%20brand.png" width='50%'/-->
-                                <h4><b>{{ 'ADDRESS' | translate }}</b></h4>
-                                6893 Vik i sogn<br />
-                                <h4><b>Email</b></h4>
-                                <a href="mailto:info@levsaman.no">info@levsaman.no</a> <br/> 
-                                <hr />
-                                <div id="map1" class="map">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-             </div>
-        </div>
-    </section>
-    <section  id="Sponsor">        
+     <section class="bg-info" id="Sponsor">        
         <div class="container">
             <div class="row">                
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -297,6 +269,77 @@
              </div>
         </div>
     </section>
+    <section id="ContactUs">
+        <div class="container">            
+            <div class="row">                
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">{{ 'MENU_CONTACT_US' | translate }}</h2>
+                    <hr class="primary">
+                </div>
+                <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-inline text-center center-block" >
+                                    <li>
+                                        <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/levsamanVik" target="_blank">
+                                            <span class="fa fa-twitter">  
+                                            </span>  
+                                        </a>
+                                    </li>
+                                    <li>                                        
+                                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/LevSaman-1495290847467217/" target="_blank">
+                                            <span class="fa fa-facebook">  
+                                            </span>  
+                                        </a>  
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/10843295?trk=prof-vol_exp-org_name" target="_blank">
+                                            <span class="fa fa-linkedin">  
+                                            </span>  
+                                        </a> 
+                                    </li>
+                                    <!--li>
+                                        <a class="btn btn-social-icon btn-github" href="https://github.com/smartrtos/RTOS" target="_blank">
+                                            <span class="fa fa-github">  
+                                            </span>  
+                                        </a>
+                                    </li-->
+                                    <!--li>
+                                        <a class="btn btn-social-icon btn-youtube" href="https://www.youtube.com/user/smartRTOS" target="_blank">
+                                            <span class="fa fa-youtube">  
+                                            </span>  
+                                        </a>
+                                    </li-->                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div>
+                        <div class="panel panel-default">
+                            <div class="panel-body text-center">
+                                
+                    <!--img src="img/logo%20and%20brand.png" width='50%'/-->
+                                <h4><b>{{ 'ADDRESS' | translate }}</b></h4>
+                                6893 Vik i sogn<br />
+                                <h4><b>Email</b></h4>
+                                <a href="mailto:info@levsaman.no">info@levsaman.no</a> <br/> 
+                                <hr />
+                                <div id="map1" class="map">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+   
 
     <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
