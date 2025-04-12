@@ -1,409 +1,509 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<!-- Google Analytics -->    
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <!-- Google Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
 
-  ga('create', 'UA-79223003-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<head>
-    <meta name="google-site-verification" content="7yXwu6Z7uMidcd9PVrNi0NtMCN1vDxszSCy-xA30pcs" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    ga("create", "UA-79223003-1", "auto");
+    ga("send", "pageview");
+  </script>
+  <head>
+    <meta
+      name="google-site-verification"
+      content="7yXwu6Z7uMidcd9PVrNi0NtMCN1vDxszSCy-xA30pcs"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <title>LevSaman</title>
-    <link rel="shortcut icon" href="shortcut_icon/master_favicon_thumbnail.png" />
+    <link
+      rel="shortcut icon"
+      href="shortcut_icon/master_favicon_thumbnail.png"
+    />
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      type="text/css"
+    />
 
     <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="css/smartRTOSyoutube.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.0.0/bootstrap-social.css">
-
-
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/smartRTOSyoutube.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.0.0/bootstrap-social.css"
+    />
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css" type="text/css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css"
+      type="text/css"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/creative.css" type="text/css">
-    
-    
+    <link rel="stylesheet" href="css/creative.css" type="text/css" />
+
     <!-- Translation-->
-    <script data-require="angular.js@1.3.15" data-semver="1.3.15" src="https://code.angularjs.org/1.3.15/angular.js"></script>
-    <script data-require="angular-translate@2.6.0" data-semver="2.6.0" src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.6.0/angular-translate.js"></script>
+    <script
+      data-require="angular.js@1.3.15"
+      data-semver="1.3.15"
+      src="https://code.angularjs.org/1.3.15/angular.js"
+    ></script>
+    <script
+      data-require="angular-translate@2.6.0"
+      data-semver="2.6.0"
+      src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.6.0/angular-translate.js"
+    ></script>
     <script src="translate.js"></script>
-    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-    
+  </head>
 
-</head>
-
-<body id="page-top" ng-app="theApp" ng-controller="HomeCtrl as ctrl">
-    
-    
-    
-
-    
-    
-    
+  <body id="page-top" ng-app="theApp" ng-controller="HomeCtrl as ctrl">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">                
-                        <!-- img src="img/logo.jpg" style="width: 150px;border-style: solid;border-width: 1px;" -->
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#Service">{{ 'MENU_PURPOSE' | translate }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#AboutUs">{{ 'MENU_ABOUT_US' | translate }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#Events">{{ 'MENU_EVENTS' | translate }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#Donation">{{ 'MENU_DONATION' | translate }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#Sponsor">{{ 'SPONSOR' | translate }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#ContactUs">{{ 'MENU_CONTACT_US' | translate }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll">
-                            <i class="fa fa-globe" aria-hidden="true"></i>
-                            <select ng-options="language | translate for language in ctrl.languages" ng-model="ctrl.language" ng-change="ctrl.updateLanguage()"></select>
-                        </a>
-                        
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand page-scroll" href="#page-top">
+            <!-- img src="img/logo.jpg" style="width: 150px;border-style: solid;border-width: 1px;" -->
+          </a>
         </div>
-        <!-- /.container-fluid -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="page-scroll" href="#Service"
+                >{{ 'MENU_PURPOSE' | translate }}</a
+              >
+            </li>
+            <li>
+              <a class="page-scroll" href="#AboutUs"
+                >{{ 'MENU_ABOUT_US' | translate }}</a
+              >
+            </li>
+            <li>
+              <a class="page-scroll" href="#Events"
+                >{{ 'MENU_EVENTS' | translate }}</a
+              >
+            </li>
+            <li>
+              <a class="page-scroll" href="#Donation"
+                >{{ 'MENU_DONATION' | translate }}</a
+              >
+            </li>
+            <li>
+              <a class="page-scroll" href="#Sponsor"
+                >{{ 'SPONSOR' | translate }}</a
+              >
+            </li>
+            <li>
+              <a class="page-scroll" href="#ContactUs"
+                >{{ 'MENU_CONTACT_US' | translate }}</a
+              >
+            </li>
+            <li>
+              <a class="page-scroll">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <select
+                  ng-options="language | translate for language in ctrl.languages"
+                  ng-model="ctrl.language"
+                  ng-change="ctrl.updateLanguage()"
+                ></select>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
     </nav>
 
     <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <!--h1>nm rulleskiskyting<br /> 23 - 25 September 2016</h1-->
-                <!--img src="img/logo.jpg" style="width: 350px;border-style: solid;border-width: 1px;"-->
-                <br/>
-                <p style="color:#0080ff; font-family:bradley Hand ITC; font-size:80px; font-weight:bold">{{ 'TITLE' | translate }}</p>
-                <br/><br/><br/><br/><br/><br/>
-                <!--a href="#Service" class="btn btn-info bg-info  btn-xl page-scroll">Let's start!</a-->
-            </div>
+      <div class="header-content">
+        <div class="header-content-inner">
+          <!--h1>nm rulleskiskyting<br /> 23 - 25 September 2016</h1-->
+          <!--img src="img/logo.jpg" style="width: 350px;border-style: solid;border-width: 1px;"-->
+          <br />
+          <p
+            style="
+              color: #0080ff;
+              font-family: bradley Hand ITC;
+              font-size: 80px;
+              font-weight: bold;
+            "
+          >
+            {{ 'TITLE' | translate }}
+          </p>
+          <br /><br /><br /><br /><br /><br />
+          <!--a href="#Service" class="btn btn-info bg-info  btn-xl page-scroll">Let's start!</a-->
         </div>
+      </div>
     </header>
 
-
-    <section class="bg-info"  id="Service">        
-        <div class="container">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">{{ 'MENU_PURPOSE' | translate }}</h2>
-                    <hr class="dark">
-            </div>
-            <section>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>{{ 'PURPOSE_PARAGRAPH' | translate }}</p>
-                </div>                
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 text-center">
-                            <div class="service-box">
-                                <i class="fa fa-4x fa-cogs wow bounceIn text-primary"></i>
-                                <h3>Training</h3>
-                                <!--p class="text-muted">Create and host your website/email</p-->
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 text-center">
-                            <div class="service-box">
-                                <i class="fa fa-4x fa-thumbs-o-up wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                                <h3>Coaching</h3>
-                                <!--p class="text-muted">Measure and monitor your website </p-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <section class="bg-info" id="Service">
+      <div class="container">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2 class="section-heading">{{ 'MENU_PURPOSE' | translate }}</h2>
+          <hr class="dark" />
         </div>
+        <section>
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <p>{{ 'PURPOSE_PARAGRAPH' | translate }}</p>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 text-center">
+                <div class="service-box">
+                  <i class="fa fa-4x fa-cogs wow bounceIn text-primary"></i>
+                  <h3>Training</h3>
+                  <!--p class="text-muted">Create and host your website/email</p-->
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 text-center">
+                <div class="service-box">
+                  <i
+                    class="fa fa-4x fa-thumbs-o-up wow bounceIn text-primary"
+                    data-wow-delay=".1s"
+                  ></i>
+                  <h3>Coaching</h3>
+                  <!--p class="text-muted">Measure and monitor your website </p-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
-    
 
     <section id="AboutUs">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">{{ 'MENU_ABOUT_US' | translate }}</h2>
-                    <hr class="dark">
-                </div>
-                <p class="col-lg-8 col-lg-offset-2 text-center">
-                    {{ 'ABOUT_US_PARAGRAPH' | translate }} 
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">{{ 'MENU_ABOUT_US' | translate }}</h2>
+            <hr class="dark" />
+          </div>
+          <p class="col-lg-8 col-lg-offset-2 text-center">
+            {{ 'ABOUT_US_PARAGRAPH' | translate }}
+          </p>
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/portfolio/1.jpg" class="img-responsive" alt="" />
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <p>
+                  Mustapha Mekhatria <br />
+                  <b>Founder and chairman</b><br />
+                  <a
+                    href="https://www.linkedin.com/in/mustaphamekhatria"
+                    target="_blank"
+                    >LinkedIn
+                  </a>
                 </p>
-                <div class="col-lg-4 col-sm-6">
-                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <p>
-                                    Mustapha Mekhatria <br/>
-                                    <b>Founder and chairman</b><br/>
-                                    <a href="https://www.linkedin.com/in/mustaphamekhatria"  target="_blank">LinkedIn </a>
-                                </p>
-                            </div>
-                        </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <p>
-                                    Loek Laumans <br/>
-                                    <b>Vice-president</b><br/>
-                                    <a href="https://no.linkedin.com/in/loek-laumans-23a8bb46"  target="_blank">LinkedIn</a>
-                                </p>
-                            </div>
-                        </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <p>
-                                    Alnour Ahmed Thurya <br/>
-                                    <b>Accountant</b><br/>
-                                    <a href="https://www.linkedin.com/in/alnour-ahmed-osman-46293789"  target="_blank">LinkedIn </a>
-                                </p>
-                            </div>
-                        </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/portfolio/2.jpg" class="img-responsive" alt="" />
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <p>
+                  Loek Laumans <br />
+                  <b>Vice-president</b><br />
+                  <a
+                    href="https://no.linkedin.com/in/loek-laumans-23a8bb46"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="img/portfolio/3.jpg" class="img-responsive" alt="" />
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <p>
+                  Alnour Ahmed Thurya <br />
+                  <b>Accountant</b><br />
+                  <a
+                    href="https://www.linkedin.com/in/alnour-ahmed-osman-46293789"
+                    target="_blank"
+                    >LinkedIn
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    
-<div><span ng-bind-html-unsafe="q.CATEGORY">
-    
-    <section class="bg-success"  id="Events">        
-        <div class="container">
+
+    <div>
+      <span ng-bind-html-unsafe="q.CATEGORY">
+        <section class="bg-success" id="Events">
+          <div class="container">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">{{ 'MENU_EVENTS' | translate }}</h2>
-                    <hr class="dark">
+              <h2 class="section-heading">{{ 'MENU_EVENTS' | translate }}</h2>
+              <hr class="dark" />
             </div>
             <section>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>{{ 'EVENTS_PARAGRAPH' | translate }}</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>{{ 'EVENTS_PARAGRAPH_VOLUNTEER' | translate }} <a href="http://goo.gl/forms/bxZup01noK3VJ7m13" target="_blank">Link</a> </p>
-                </div>
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <p>{{ 'EVENTS_PARAGRAPH' | translate }}</p>
+              </div>
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <p>
+                  {{ 'EVENTS_PARAGRAPH_VOLUNTEER' | translate }}
+                  <a
+                    href="http://goo.gl/forms/bxZup01noK3VJ7m13"
+                    target="_blank"
+                    >Link</a
+                  >
+                </p>
+              </div>
             </section>
-        </div>
-    </section>
-        <section  id="Donation">        
-        <div class="container">
+          </div>
+        </section>
+        <section id="Donation">
+          <div class="container">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">{{ 'MENU_DONATION' | translate }}</h2>
-                    <hr class="dark">
+              <h2 class="section-heading">{{ 'MENU_DONATION' | translate }}</h2>
+              <hr class="dark" />
             </div>
             <section>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>{{ 'DONATION_PARAGRAPH' | translate }}<br/>
-                        <b>{{ 'BANK_INFORMATION' | translate }}</b>: 3800 15 89889 
-                    </p>
-                </div>
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <p>
+                  {{ 'DONATION_PARAGRAPH' | translate }}<br />
+                  <b>{{ 'BANK_INFORMATION' | translate }}</b>: 3800 15 89889
+                </p>
+              </div>
             </section>
-        </div>
-    </section>
-</span></div>
-     <section class="bg-info" id="Sponsor">        
-        <div class="container">
-            <div class="row">                
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">{{ 'SPONSOR' | translate }}</h2>
-                    <hr class="primary">
+          </div>
+        </section>
+      </span>
+    </div>
+    <section class="bg-info" id="Sponsor">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">{{ 'SPONSOR' | translate }}</h2>
+            <hr class="primary" />
+          </div>
+
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <div>
+              <div class="panel panel-default">
+                <div class="panel-body text-center">
+                  <a href="http://www.smartvik.com" target="_blank">
+                    <img src="img/logo%20and%20brand.png" width="50%" />
+                  </a>
+                  <h4>
+                    <b>Web: </b
+                    ><a href="http://www.smartvik.com" target="_blank">
+                      www.smartvik.com</a
+                    ><br />
+                  </h4>
+                  <h4>
+                    <b>Email: </b>
+                    <a href="mailto:info@smartvik.com">info@smartvik.com</a>
+                    <br />
+                  </h4>
                 </div>
-                
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div>
-                        <div class="panel panel-default">
-                            <div class="panel-body text-center">
-                                
-                                <a href="http://www.smartvik.com" target="_blank">
-                                    <img src="img/logo%20and%20brand.png" width='50%'/>
-                                </a>                                   
-                                <h4><b>Web:  </b><a href="http://www.smartvik.com"  target="_blank">  www.smartvik.com</a><br /></h4>
-                                <h4><b>Email:  </b> <a href="mailto:info@smartvik.com">info@smartvik.com</a> <br/></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-             </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="ContactUs">
-        <div class="container">            
-            <div class="row">                
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">{{ 'MENU_CONTACT_US' | translate }}</h2>
-                    <hr class="primary">
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">{{ 'MENU_CONTACT_US' | translate }}</h2>
+            <hr class="primary" />
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <form name="sentMessage" id="contactForm" novalidate>
                 <div class="row">
-                <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <ul class="list-inline text-center center-block" >
-                                    <li>
-                                        <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/levsamanVik" target="_blank">
-                                            <span class="fa fa-twitter">  
-                                            </span>  
-                                        </a>
-                                    </li>
-                                    <li>                                        
-                                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/LevSaman-1495290847467217/" target="_blank">
-                                            <span class="fa fa-facebook">  
-                                            </span>  
-                                        </a>  
-                                    </li>
-                                    <li>
-                                        <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/10843295?trk=prof-vol_exp-org_name" target="_blank">
-                                            <span class="fa fa-linkedin">  
-                                            </span>  
-                                        </a> 
-                                    </li>
-                                    <!--li>
+                  <div class="col-md-12">
+                    <ul class="list-inline text-center center-block">
+                      <li>
+                        <a
+                          class="btn btn-social-icon btn-twitter"
+                          href="https://twitter.com/levsamanVik"
+                          target="_blank"
+                        >
+                          <span class="fa fa-twitter"> </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="btn btn-social-icon btn-facebook"
+                          href="https://www.facebook.com/LevSaman-1495290847467217/"
+                          target="_blank"
+                        >
+                          <span class="fa fa-facebook"> </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="btn btn-social-icon btn-linkedin"
+                          href="https://www.linkedin.com/company/10843295?trk=prof-vol_exp-org_name"
+                          target="_blank"
+                        >
+                          <span class="fa fa-linkedin"> </span>
+                        </a>
+                      </li>
+                      <!--li>
                                         <a class="btn btn-social-icon btn-github" href="https://github.com/smartrtos/RTOS" target="_blank">
                                             <span class="fa fa-github">  
                                             </span>  
                                         </a>
                                     </li-->
-                                    <!--li>
+                      <!--li>
                                         <a class="btn btn-social-icon btn-youtube" href="https://www.youtube.com/user/smartRTOS" target="_blank">
                                             <span class="fa fa-youtube">  
                                             </span>  
                                         </a>
-                                    </li-->                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </form>
+                                    </li-->
+                    </ul>
+                  </div>
                 </div>
+              </form>
             </div>
-                
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <div>
-                        <div class="panel panel-default">
-                            <div class="panel-body text-center">
-                                
-                    <!--img src="img/logo%20and%20brand.png" width='50%'/-->
-                                <h4><b>{{ 'ADDRESS' | translate }}</b></h4>
-                                6893 Vik i sogn<br />
-                                <h4><b>Email</b></h4>
-                                <a href="mailto:info@levsaman.no">info@levsaman.no</a> <br/> 
-                                <hr />
-                                <div id="map1" class="map">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <div>
+              <div class="panel panel-default">
+                <div class="panel-body text-center">
+                  <!--img src="img/logo%20and%20brand.png" width='50%'/-->
+                  <h4><b>{{ 'ADDRESS' | translate }}</b></h4>
+                  6893 Vik i sogn<br />
+                  <h4><b>Email</b></h4>
+                  <a href="mailto:info@levsaman.no">info@levsaman.no</a> <br />
+                  <hr />
+                  <div id="map1" class="map"></div>
                 </div>
-             </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-   
 
     <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></scrip -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    
+
     <!--script src="js/jquery.fittext.js"></script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
-    
+
     <!--script src="js/wow.min.js"></script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-
     <!-- Custom Theme JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-creative/1.0.2/js/creative.min.js"></script>
-    
-    
-     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
-                <script type="text/javascript">
-                    jQuery(function ($) {
-                        function init_map1() {
-                            var myLocation = new google.maps.LatLng(61.082032, 6.575974);
-                            var mapOptions = {
-                                center: myLocation,
-                                zoom: 11
-                            };
-                            var marker = new google.maps.Marker({
-                                position: myLocation,
-                                title: "Property Location"
-                            });
-                            var map = new google.maps.Map(document.getElementById("map1"),
-                                mapOptions);
-                            marker.setMap(map);
-                        }
-                        init_map1();
-                    });
-                </script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
-                <style>
-                    .map {
-                        min-width: 300px;
-                        min-height: 300px;
-                        width: 100%;
-                        height: 100%;
-                    }
+    <script type="text/javascript">
+      jQuery(function ($) {
+        function init_map1() {
+          var myLocation = new google.maps.LatLng(61.082032, 6.575974);
+          var mapOptions = {
+            center: myLocation,
+            zoom: 11,
+          };
+          var marker = new google.maps.Marker({
+            position: myLocation,
+            title: "Property Location",
+          });
+          var map = new google.maps.Map(
+            document.getElementById("map1"),
+            mapOptions
+          );
+          marker.setMap(map);
+        }
+        init_map1();
+      });
+    </script>
 
-                    .header {
-                        background-color: #F5F5F5;
-                        color: #36A0FF;
-                        height: 70px;
-                        font-size: 27px;
-                        padding: 10px;
-                    }
-                </style>  
+    <style>
+      .map {
+        min-width: 300px;
+        min-height: 300px;
+        width: 100%;
+        height: 100%;
+      }
 
-
-</body>
-
+      .header {
+        background-color: #f5f5f5;
+        color: #36a0ff;
+        height: 70px;
+        font-size: 27px;
+        padding: 10px;
+      }
+    </style>
+  </body>
 </html>
